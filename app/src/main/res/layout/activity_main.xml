@@ -5,14 +5,31 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight=".3"
-        android:src="@drawable/map_pinned"
-        android:scaleType="center"
-        />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/map_pinned"
+            android:scaleType="center"
+            />
+        <Button
+            android:id="@+id/changeviewbtn"
+            android:background="@drawable/checkinbtn"
+            android:layout_width="144dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"

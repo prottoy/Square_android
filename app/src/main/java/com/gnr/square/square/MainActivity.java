@@ -30,19 +30,29 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
         loadSquareWebsite();
 
-        Button button = (Button) findViewById(R.id.checkinbtn);
-        boolean isPressed=false;
-
-        button.setOnClickListener(new OnClickListener() {
+        Button changeViewBtn = (Button) findViewById(R.id.changeviewbtn);
+        changeViewBtn.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Settings.class);
                 view.getContext().startActivity(i);
+            }
+
+        });
+
+        Button checkInBtn = (Button) findViewById(R.id.checkinbtn);
+        checkInBtn.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Checking in!",
+                        Toast.LENGTH_LONG).show();
             }
 
         });
