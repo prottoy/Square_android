@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:hint="Name"
             android:ems="10"
             android:id="@+id/editText"
             android:layout_gravity="center_horizontal" />
@@ -45,14 +45,15 @@
             android:ems="10"
             android:id="@+id/editText2"
             android:layout_gravity="center_horizontal"
-            android:text="Email" />
+            android:hint="Email" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/green_button" />
-
+        <Button
+            android:id="@+id/savebtn"
+            android:background="@drawable/red_button"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:text="SAVE"
+            android:textColor="#FFFFFF"
+            />
     </LinearLayout>
 </RelativeLayout>

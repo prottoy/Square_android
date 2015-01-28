@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class Settings extends ActionBarActivity {
@@ -22,6 +23,15 @@ public class Settings extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        Button saveBtn = (Button) findViewById(R.id.savebtn);
+        saveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Saving!",
+                        Toast.LENGTH_LONG).show();
             }
         });
     }
